@@ -1,9 +1,8 @@
-
 from src.core.test_case import TestCase
+from src.core.test_result import TestResult
 
 
 class MyTest(TestCase):
-
     def set_up(self):
         print('set_up')
 
@@ -21,11 +20,15 @@ class MyTest(TestCase):
 
 
 if __name__ == "__main__":
+    result = TestResult()
+
     test = MyTest('test_a')
-    test.run()
+    test.run(result)
 
     test = MyTest('test_b')
-    test.run()
+    test.run(result)
 
     test = MyTest('test_c')
-    test.run()
+    test.run(result)
+
+    print(result.summary())
