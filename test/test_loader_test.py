@@ -1,7 +1,3 @@
-import sys
-import os
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-
 from src.core.test_case import TestCase
 from src.core.test_loader import TestLoader
 from src.core.test_suite import TestSuite
